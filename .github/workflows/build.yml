@@ -1,0 +1,28 @@
+name: Build Dev Tools
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Stardew mod build environment
+        uses: Pathoschild/SMAPI-ModBuildWorkflow/add-build-environment@v1
+
+      - name: Build mod and release ZIP
+        run: dotnet build BentleyPlayz.AdvertisingDevTools/BentleyPlayz.AdvertisingDevTools.csproj --configuration Release
+
+      - name: Upload compiled mod ZIP
+        uses: Pathoschild/SMAPI-ModBuildWorkflow/upload-release-artifacts@v1
+        with:
+          path: _releases
+          create_attestations: false
