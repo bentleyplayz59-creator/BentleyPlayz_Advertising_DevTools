@@ -1,4 +1,4 @@
-namespace BentleyPlayz.Advertising;
+namespace BentleyPlayz.AdvertisingDevTools;
 
 /// <summary>
 /// Public API used by companion mods such as Bentley's Advertising Dev Tools.
