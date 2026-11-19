@@ -2,7 +2,7 @@
 
 Companion SMAPI mod for [Bentley's Advertising](https://github.com/bentleyplayz59-creator/BentleyPlayz_Advertising). It adds a developer menu for forcing advertisements and letters on demand, for screenshots and testing.
 
-**Requires** Bentley's Advertising 1.0.0 or newer (the build that includes the Dev Tools API) and SMAPI 4.3.0 or newer.
+**Requires** Bentley's Advertising 1.0.1 or newer (the build that includes the Dev Tools API) and SMAPI 4.3.0 or newer.
 
 ## Installation
 
