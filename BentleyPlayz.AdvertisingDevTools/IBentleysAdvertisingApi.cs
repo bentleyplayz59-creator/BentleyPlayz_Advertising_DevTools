@@ -1,8 +1,8 @@
 namespace BentleyPlayz.AdvertisingDevTools;
 
 /// <summary>
-/// Public API used by companion mods such as Bentley's Advertising Dev Tools.
-/// Keep this interface in sync with the copy in the Dev Tools project.
+/// Contract provided by Bentley's Advertising 1.0.1. Keep method names and signatures
+/// synchronized with the public API in the main mod's ModApi.cs.
 /// </summary>
 public interface IBentleysAdvertisingApi
 {
@@ -14,27 +14,4 @@ public interface IBentleysAdvertisingApi
     string? ForceLetter(string advertiserId, bool deliverNow);
     void ClearAdFree();
     string GetStatusText();
-}
-
-/// <summary>
-/// Explicit API adapter. Returning this interface implementation from GetApi keeps the
-/// companion mod contract separate from the main mod's internal implementation.
-/// </summary>
-public sealed class BentleysAdvertisingApi : IBentleysAdvertisingApi
-{
-    private readonly ModEntry Mod;
-
-    public BentleysAdvertisingApi(ModEntry mod)
-    {
-        this.Mod = mod;
-    }
-
-    public IReadOnlyList<string> GetAdvertiserIds() => this.Mod.GetAdvertiserIds();
-    public string GetAdvertiserName(string advertiserId) => this.Mod.GetAdvertiserName(advertiserId);
-    public int GetPopupCount(string advertiserId) => this.Mod.GetPopupCount(advertiserId);
-    public int GetLetterCount(string advertiserId) => this.Mod.GetLetterCount(advertiserId);
-    public string? ForcePopup(string advertiserId) => this.Mod.ForcePopup(advertiserId);
-    public string? ForceLetter(string advertiserId, bool deliverNow) => this.Mod.ForceLetter(advertiserId, deliverNow);
-    public void ClearAdFree() => this.Mod.ClearAdFree();
-    public string GetStatusText() => this.Mod.GetStatusText();
 }
