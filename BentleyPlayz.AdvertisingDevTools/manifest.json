@@ -1,7 +1,7 @@
 {
   "Name": "Bentley's Advertising Dev Tools",
   "Author": "Bentley Playz",
-  "Version": "1.0.0",
+  "Version": "1.0.1",
   "Description": "Developer menu for Bentley's Advertising: force advertisement popups and advertiser letters (for screenshots and testing).",
   "UniqueID": "BentleyPlayz.AdvertisingDevTools",
   "EntryDll": "BentleyPlayz.AdvertisingDevTools.dll",
@@ -9,7 +9,7 @@
   "Dependencies": [
     {
       "UniqueID": "BentleyPlayz.Advertising",
-      "MinimumVersion": "1.0.0",
+      "MinimumVersion": "1.0.1",
       "IsRequired": true
     }
   ]
